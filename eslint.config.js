@@ -1,0 +1,42 @@
+export default [
+  {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  {
+    extends: [
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "next/core-web-vitals",
+    ],
+    plugins: ["react", "prettier"],
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
+      ecmaVersion: 12,
+      sourceType: "module",
+    },
+  },
+  {
+    rules: {
+      "react/react-in-jsx-scope": 0,
+      "react/jsx-uses-vars": "error",
+      "react/prop-types": 0,
+    },
+  },
+  {
+    globals: {
+      Go: "readonly",
+      process: "readonly",
+      global: "readonly",
+      module: "readonly",
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
+];
