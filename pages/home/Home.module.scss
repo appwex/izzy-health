@@ -1,0 +1,13 @@
+@import 'styles/common';
+
+.mainWrapper {
+  @extend .flexCenterCol;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $brightBlue;
+    }
+  }
+}
