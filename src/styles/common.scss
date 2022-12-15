@@ -1,7 +1,7 @@
-@import './mixins.scss';
-@import './animations.scss';
-@import './colors.scss';
-@import './link.scss';
+@use './mixins.scss';
+@use './animations.scss';
+@use './colors.scss';
+@use './link.scss';
 
 .flexStart {
   display: flex;
