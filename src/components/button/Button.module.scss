@@ -1,10 +1,10 @@
-@use 'styles/common';
+@use 'styles/colors' as c;
 
 .btn {
   all: unset;
   padding: 0.75rem 1rem;
   border-radius: 8px;
-  color: $white;
+  color: c.$white;
   cursor: pointer;
 
   &:hover {
@@ -17,16 +17,16 @@
 }
 
 .primary {
-  background-color: $primaryBlue;
+  background-color: c.$primaryBlue;
 }
 
 .secondary {
-  color: $black;
-  background-color: $white;
+  color: c.$black;
+  background-color: c.$white;
 }
 
 .error {
-  background-color: $red;
+  background-color: c.$red;
 }
 
 .rounded {
