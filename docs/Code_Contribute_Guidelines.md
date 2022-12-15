@@ -55,6 +55,28 @@ import "./App.css"                                            // stylesheet
 - Always have a blank line between every selector, for the readablity purpose.
 - Use `camelCase` classes names for styling.
 
+##### SCSS
+
+When using common variable from single styles file in styles folder, following code is required
+eg: 
+```css
+@use 'styles/colors' as c;
+
+.container {
+    background: c.$white;
+}
+```
+where c is the namespace of the stylesheet.
+
+To use all stylesheet at once, it is possible to access it with:
+```css
+@use 'styles' as *; 
+```
+
+and proceed with using all the stylesheet at once as indicated in styles/_index.scss
+
+
+
 ##### Standard Code
 
 - Do not leave `console.log` on prod / master, keep it on other personal branch if important.
