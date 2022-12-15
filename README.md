@@ -1,5 +1,8 @@
 # Izzyhealth
 
+![image](https://user-images.githubusercontent.com/93012310/207965271-11dae17c-4c74-40cc-b272-8d0864770cf9.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
