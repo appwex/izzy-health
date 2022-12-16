@@ -1,0 +1,79 @@
+@import 'styles/common';
+.careSection {
+  width: 100%;
+
+  div {
+    width: 100%;
+  }
+}
+
+.careSectionHeader {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  background-color: $white;
+
+  h1 {
+    color: $deepBlue;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1.85rem;
+  }
+
+  span {
+    color: $veryLightGray;
+    font-size: 0.85rem;
+    line-height: 1;
+    display: inline-block;
+  }
+}
+
+.careSectionBody {
+  margin-right: 3rem;
+
+  > div {
+    justify-content: space-between;
+
+    .contactText {
+      p {
+        font-size: 1.65rem;
+        line-height: 1.57;
+
+        span {
+          font-weight: 600;
+          color: $linkHover;
+        }
+
+        button {
+          font-size: 0.85rem;
+          border-radius: 30px;
+          background-color: $linkHover;
+        }
+      }
+    }
+
+    .contactText2 {
+      p {
+        font-size: 0.85rem;
+        color: $deepBlue;
+        width: 80%;
+      }
+    }
+  }
+}
+
+.doctors {
+  margin-left: 3rem;
+  > div {
+    flex-direction: column;
+  }
+
+  svg {
+    transform: scale(0.6);
+  }
+
+  span {
+    font-size: 0.975rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
