@@ -1,0 +1,97 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+$grid: grid; 
+$flex: flex;
+$columns: 250px 250px;
+$halfWidth: 50%;
+$spaceBetween: space-between;
+$alignCenter: center;
+$heartBg: #DCE2FF;
+$chronicBg:#FFEDDD;
+$pollutionBg:#F0DDFF;
+$globalBg: #E5F9FF;
+$textColor: #1F2343;
+$fontFamily: 'Proxima Nova Alt Lt', sans-serif; 
+$flexColumn: column;
+$gap: 25px;
+
+.combatWrapper {
+  display: $flex;
+  justify-content: $spaceBetween;
+  align-items: $alignCenter; 
+  font-family:  $fontFamily;
+   padding: 20px 0;                                   
+}
+
+.left{
+  width: $halfWidth;
+  padding-right: 100px;
+  display: $flex;
+  flex-direction: $flexColumn;
+  gap: $gap;
+  justify-content: $spaceBetween;
+}
+.right{
+ width: $halfWidth;
+}
+
+.left h2 {
+ font-size: 46px;
+ font-weight: 800; 
+ padding-top: 20px;                                             
+}
+
+.left p {
+ color: #585B71;
+ line-height: 25px;
+}
+.grid {
+  display: $grid;
+  grid-template-columns: $columns;
+  justify-content: center;
+  grid-gap: 12px 10px;
+}
+
+.card{
+ display: flex;
+ text-align: center;
+ align-items: center;
+ justify-content: center;
+ color: $textColor;
+}
+
+
+.card:nth-child(1) {
+ background: $chronicBg;
+ align-self: flex-end;
+ height: 140px;
+ border-top-left-radius: 37px;
+ border-top-right-radius: 36px;
+ border-bottom-left-radius: 31px
+}
+
+.card:nth-child(2){
+ background: $heartBg;
+ height: 200px;
+ border-top-left-radius: 37px;
+ border-top-right-radius: 36px;
+ border-bottom-right-radius: 35px
+}
+
+.card:nth-child(3) {
+ background:$pollutionBg ;
+ height: 200px;
+ border-top-left-radius: 37px;
+ border-bottom-right-radius: 35px;
+ border-bottom-left-radius: 31px;
+ padding: 0 50px
+}
+
+.card:nth-child(4){
+ background: $globalBg;
+ align-self: flex-start;
+ height: 140px;
+ border-top-right-radius: 36px;
+ border-bottom-right-radius: 35px;
+ border-bottom-left-radius: 31px;
+ padding: 0 50px
+}

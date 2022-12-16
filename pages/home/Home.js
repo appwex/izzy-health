@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
 import Button from 'components/button'
-
+import Combat from 'components/Combat'
 import stl from './Home.module.scss'
 
 const Home = () => (
   <div className={stl.wrapper}>
-    <h1>{`Let's Start without wasting our precious time 🕗`}</h1>
+    {/* <h1>{`Let's Start without wasting our precious time 🕗`}</h1>
 
     <Button label="Yay!" />
 
@@ -14,7 +14,8 @@ const Home = () => (
       <a className={stl.link}>
         You can also checkout story of the components 🚀
       </a>
-    </Link>
+    </Link> */}
+    <Combat />
   </div>
 )
 
