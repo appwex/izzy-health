@@ -8,8 +8,8 @@ Just a clean and short guideline about how to collaborate.
 - Always make sure to attach the issue with the Pull Request, by adding `Fixes #{issue-number}` in the PR description.
 - If creating an issue, please make sure to add a description or a screenshot.
 - If creating an issue for a new component and the design file is available, please share the link (of the of it) in the issue description.
-- Always use [Facebook Clone](https://github.com/orgs/appwex/projects/5) project board for organizing issues.
-- If a developer start working on an issue make sure to move to progress table in the [Facebook Clone](https://github.com/orgs/appwex/projects/5) project board.
+- Always use [IzzyHealth](https://github.com/orgs/appwex/projects/6) project board for organizing issues.
+- If a developer start working on an issue make sure to move to progress table in the [IzzyHealth](https://github.com/orgs/appwex/projects/6) project board.
 - If an issue needs more clarification to understand (cannot describe in few words or screenshot), so instead of meetings, we use [loom videos](https://www.loom.com/) to describe it. And add it in Issue description or in the slack channel.
 
 ##### Branch
