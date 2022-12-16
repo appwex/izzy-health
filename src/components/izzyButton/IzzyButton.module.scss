@@ -1,0 +1,33 @@
+@import 'styles/common';
+
+.btn {
+  border: none;
+  font-size: 15px;
+  //   font-family: 'Proxima Nova Alt', serif;
+  height: 59px;
+  @extend .flexCenter;
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:disabled {
+    filter: brightness(0.5);
+  }
+}
+
+// variants
+.btnPrimary {
+  background-color: $primaryButton;
+  color: $white;
+}
+
+.btnSecondary {
+  background-color: transparent;
+  border: 2px solid $primaryButton;
+  color: $primaryButton;
+}
+
+
+// type
+.btnRounded {
+  border-radius: 69px;
+}
