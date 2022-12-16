@@ -1,6 +1,9 @@
 import combatStyle from './Combat.module.scss'
 import React from 'react'
-import Button from '../button'
+// import Button from '../button'
+import IzzyButton from 'components/izzyButton/'
+import { BUTTON_TYPE } from 'components/izzyButton/izzyButton'
+
 const Combat = () => {
   const cardTexts = [
     'Chronic Desease',
@@ -24,7 +27,11 @@ const Combat = () => {
             </p>
           </div>
           <div>
-            <Button label="Get Started" btnType={'rounded'} />
+            <IzzyButton
+              label="Get Started"
+              variant={BUTTON_TYPE.btnPrimary}
+              btnType={BUTTON_TYPE.btnRounded}
+            />
           </div>
         </div>
         <div className={combatStyle.right}>

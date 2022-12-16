@@ -15,7 +15,8 @@ $darkBlue: #1f2343;
   display: flex;
   align-items: center;
   font-family: 'Proxima Nova Alt Lt'; 
-  padding: 50px 0;                                              
+  padding: 50px 0px; 
+  width: 100%;                                             
   @include mobile();
 }
 
