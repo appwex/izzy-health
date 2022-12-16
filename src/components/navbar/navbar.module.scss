@@ -1,4 +1,4 @@
-@import '/src/styles/common.scss';
+@import 'styles/common';
 
 @mixin mobile {
   @media (max-width: 786px) {
@@ -78,9 +78,13 @@
   align-items: center;
 
   :last-child {
-    padding: 1rem 1.5rem;
-    border: 1px solid #fff;
-    border-radius: 40px;
+    border: 1px solid $white;
+    background: none;
+
+    &:hover {
+      border: 1px solid $primaryBlue;
+      color: $primaryBlue;
+    }
   }
 }
 
