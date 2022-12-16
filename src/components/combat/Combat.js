@@ -1,10 +1,16 @@
-import combatStyle from '../styles/Combat.module.scss'
+import combatStyle from './Combat.module.scss'
 import React from 'react'
-import Button from './button'
+import Button from '../button'
 const Combat = () => {
+  const cardTexts = [
+    'Chronic Desease',
+    'Heart diseases',
+    'Pollution relataed sickness',
+    'Global warming potential health risk',
+  ]
   return (
     <section id="combat-section">
-      <div className={combatStyle.combatWrapper}>
+      <div className={combatStyle.wrapper}>
         <div className={combatStyle.left}>
           <div>
             <h2>What we have to combat in today’s world</h2>
@@ -23,18 +29,13 @@ const Combat = () => {
         </div>
         <div className={combatStyle.right}>
           <div className={combatStyle.grid}>
-            <div className={combatStyle.card}>
-              <p>Chronic Desease</p>
-            </div>
-            <div className={combatStyle.card}>
-              <p>Heart diseases</p>
-            </div>
-            <div className={combatStyle.card}>
-              <p>Pollution relataed sickness</p>
-            </div>
-            <div className={combatStyle.card}>
-              <p>Global warming potential health risk</p>
-            </div>
+            {cardTexts.map(text => {
+              return (
+                <div>
+                  <p>{text}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

@@ -1,0 +1,106 @@
+@import '/src/styles/common.scss';
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+
+                
+$darkBlue: #1f2343;
+
+@mixin mobile {
+  @media (max-width: 786px) {
+    @content;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  font-family: 'Proxima Nova Alt Lt'; 
+  padding: 50px 0;                                              
+  @include mobile();
+}
+
+.left {
+  width: 50%;
+  padding-right: 100px;
+
+  h2 {
+    font-size: 46px;
+    color: $darkBlue;
+    margin-bottom: 20px;
+    font-weight: 900;
+
+    @include mobile() {
+     font-size: 32px;
+    }
+  }
+
+  p {
+    color: #585b71;
+    margin-bottom: 20px;
+    line-height: 25px;
+  }
+
+  @include mobile() {
+    padding-right: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.right {
+  width: 50%;
+  padding-left: 40px;
+  @include mobile() {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8px;
+  row-gap: 12px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 50px;
+
+    &:nth-child(1) {
+      background-color: #ffeddd;
+      height: 140px;
+      align-self: flex-end;
+      border-top-left-radius: 37px;
+      border-top-right-radius: 36px;
+      border-bottom-left-radius: 31px;
+    }
+    &:nth-child(2) {
+      background-color: #dce2ff;
+      height: 190px;
+      border-top-left-radius: 37px;
+      border-top-right-radius: 36px;
+      border-bottom-right-radius: 35px;
+    }
+    &:nth-child(3) {
+      background-color: #f0ddff;
+      height: 190px;
+      border-top-left-radius: 37px;
+      border-bottom-right-radius: 35px;
+      border-bottom-left-radius: 31px;
+    }
+    &:nth-child(4) {
+      background-color: #e5f9ff;
+      height: 140px;
+      border-top-right-radius: 36px;
+      border-bottom-right-radius: 35px;
+      border-bottom-left-radius: 31px;
+    }
+
+    @include mobile() {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+}
