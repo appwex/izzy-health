@@ -75,7 +75,9 @@
 .login {
   @extend .flexCenter;
   gap: 1rem;
-  align-items: center;
+  @include mobile() {
+    flex-direction: column;
+  }
 
   :last-child {
     border: 1px solid $white;

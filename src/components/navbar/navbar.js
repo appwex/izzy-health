@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <header className={stl.header}>
-      <nav className={clsx(stl.navbar, `${expendNav ? stl.expend : ''}`)}>
+      <nav className={clsx(stl.navbar, expendNav && stl.expend)}>
         <Logo className={stl.logo} />
 
         <ul className={stl.navLinks}>
@@ -42,7 +42,6 @@ const Navbar = () => {
 
         <div className={stl.login}>
           <Link href="/">Login</Link>
-          {/* <Link href="/">Get Started</Link> */}
           <IzzyButton
             varient={BUTTON_TYPE.btnSecondary}
             btnType={BUTTON_TYPE.btnRounded}
@@ -52,7 +51,7 @@ const Navbar = () => {
       </nav>
 
       <div
-        className={clsx(stl.mobileNav, `${navIcon ? stl.show : ''}`)}
+        className={clsx(stl.mobileNav, navIcon && stl.show)}
         onClick={handelClick}
       >
         <span />
