@@ -40,7 +40,7 @@ IzzyButton.defaultProps = {
 
 IzzyButton.propTypes = {
   label: PropTypes.string,
-  variant: PropTypes.oneOf(['primary']),
+  variant: PropTypes.oneOf(['btnPrimary', 'btnSecondary']),
   btnType: PropTypes.string,
   customClass: PropTypes.string,
   width: PropTypes.number,
