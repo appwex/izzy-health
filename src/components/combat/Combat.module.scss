@@ -1,5 +1,5 @@
 @import '/src/styles/common.scss';
-@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+
 
                 
 $darkBlue: #1f2343;
@@ -15,7 +15,7 @@ $darkBlue: #1f2343;
   display: flex;
   align-items: center;
   font-family: 'Proxima Nova Alt Lt'; 
-  padding: 50px 0px; 
+  padding: 50px; 
   width: 100%;                                             
   @include mobile();
 }
