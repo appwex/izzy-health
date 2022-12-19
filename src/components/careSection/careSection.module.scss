@@ -1,79 +1,100 @@
 @import 'styles/common';
-.careSection {
-  width: 100%;
 
-  div {
-    width: 100%;
+@mixin mobileMq {
+  @media (max-width: 849px) {
+    @content;
   }
 }
 
-.careSectionHeader {
-  width: 100%;
-  margin-bottom: 2.5rem;
-  background-color: $white;
+.container {
+  padding: 2rem 4rem;
+  color: $blue;
 
-  h1 {
-    color: $deepBlue;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    font-size: 1.85rem;
+  @include mobileMq() {
+    padding: 1rem;
   }
 
-  span {
-    color: $veryLightGray;
-    font-size: 0.85rem;
-    line-height: 1;
-    display: inline-block;
+  .header {
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
   }
-}
 
-.careSectionBody {
-  margin-right: 3rem;
+  .body {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-  > div {
-    justify-content: space-between;
+    .mobileCompareText {
+      display: none;
+      margin-top: 1.5rem;
+      @include mobileMq() {
+        display: block;
+      }
+    }
 
-    .contactText {
-      p {
-        font-size: 1.65rem;
-        line-height: 1.57;
+    .text {
+      margin-right: 2rem;
 
-        span {
+      .contact {
+        font-size: 1.4rem;
+        line-height: 1.4;
+      }
+
+      span {
+        color: $linkHover;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      button {
+        background-color: $linkHover;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $white;
+        word-break: keep-all;
+      }
+
+      .compare {
+        font-size: 0.9rem;
+        padding-right: 4rem;
+        margin-top: 1.8rem;
+        @include mobileMq() {
+          display: none;
+        }
+      }
+    }
+
+    .doctors {
+      display: flex;
+
+      @include mobileMq() {
+        margin: 2rem 0;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        svg {
+          transform: scale(0.6);
+          margin-top: -15px;
+        }
+
+        p {
           font-weight: 600;
-          color: $linkHover;
-        }
-
-        button {
-          font-size: 0.85rem;
-          border-radius: 30px;
-          background-color: $linkHover;
+          font-size: 0.8rem;
         }
       }
     }
 
-    .contactText2 {
-      p {
-        font-size: 0.85rem;
-        color: $deepBlue;
-        width: 80%;
-      }
+    @include mobileMq() {
+      grid-template-columns: repeat(1, 1fr);
     }
-  }
-}
-
-.doctors {
-  margin-left: 3rem;
-  > div {
-    flex-direction: column;
-  }
-
-  svg {
-    transform: scale(0.6);
-  }
-
-  span {
-    font-size: 0.975rem;
-    font-weight: 600;
-    line-height: 1.2;
   }
 }

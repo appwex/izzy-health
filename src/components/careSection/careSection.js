@@ -1,10 +1,8 @@
 import clsx from 'clsx'
 import stl from './careSection.module.scss'
 import Link from 'next/link'
-import Physician from 'assets/svg/physician.svg'
-import Psychologist from 'assets/svg/psychologist.svg'
-import Nutritionist from 'assets/svg/nutritionist.svg'
 import Button from 'components/button'
+import { Nutritionist, Physician, Psychologist } from 'assets/svg'
 
 const CareSection = () => {
   return (
