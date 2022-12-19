@@ -1,8 +1,7 @@
-import combatStyle from './Combat.module.scss'
+import stl from './Combat.module.scss'
 import React from 'react'
-// import Button from '../button'
-import IzzyButton from 'components/izzyButton/'
-import { BUTTON_TYPE } from 'components/izzyButton/izzyButton'
+import Button from 'components/button'
+import { BUTTON_TYPE } from 'components/izzyButton/IzzyButton'
 
 const Combat = () => {
   const cardTexts = [
@@ -13,8 +12,8 @@ const Combat = () => {
   ]
   return (
     <section id="combat-section">
-      <div className={combatStyle.wrapper}>
-        <div className={combatStyle.left}>
+      <div className={stl.wrapper}>
+        <div className={stl.left}>
           <div>
             <h2>What we have to combat in today’s world</h2>
           </div>
@@ -27,15 +26,14 @@ const Combat = () => {
             </p>
           </div>
           <div>
-            <IzzyButton
+            <Button
               label="Get Started"
-              variant={BUTTON_TYPE.btnPrimary}
-              btnType={BUTTON_TYPE.btnRounded}
+             
             />
           </div>
         </div>
-        <div className={combatStyle.right}>
-          <div className={combatStyle.grid}>
+        <div className={stl.right}>
+          <div className={stl.grid}>
             {cardTexts.map(text => {
               return (
                 <div>
