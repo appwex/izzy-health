@@ -1,6 +1,6 @@
 import stl from './Combat.module.scss'
 import React from 'react'
-import Button from 'components/button'
+import IzzyButton from 'components/izzyButton/'
 import { BUTTON_TYPE } from 'components/izzyButton/IzzyButton'
 
 const Combat = () => {
@@ -10,6 +10,7 @@ const Combat = () => {
     'Pollution relataed sickness',
     'Global warming potential health risk',
   ]
+
   return (
     <section id="combat-section">
       <div className={stl.wrapper}>
@@ -26,20 +27,21 @@ const Combat = () => {
             </p>
           </div>
           <div>
-            <Button
+            <IzzyButton
               label="Get Started"
-             
+              variant={BUTTON_TYPE.btnPrimary}
+              btnType={BUTTON_TYPE.btnRounded}
             />
           </div>
         </div>
         <div className={stl.right}>
           <div className={stl.grid}>
-            {cardTexts.map(text => {
-              return (
-                <div>
-                  <p>{text}</p>
-                </div>
-              )
+            {cardTexts.map(text => {            
+                return( 
+                  <div>
+                      <p>{text}</p>
+                   </div>
+                )
             })}
           </div>
         </div>
