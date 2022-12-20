@@ -5,6 +5,7 @@
 $darkBlue: #1f2343;
 
 @mixin mobile {
+
   @media (max-width: 786px) {
     @content;
     flex-direction: column;
@@ -51,6 +52,7 @@ $darkBlue: #1f2343;
 .right {
   width: 50%;
   padding-left: 40px;
+
   @include mobile() {
     width: 100%;
     padding-left: 0;
@@ -62,6 +64,7 @@ $darkBlue: #1f2343;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
   row-gap: 12px;
+
   div {
     display: flex;
     align-items: center;
@@ -77,6 +80,7 @@ $darkBlue: #1f2343;
       border-top-right-radius: 36px;
       border-bottom-left-radius: 31px;
     }
+    
     &:nth-child(2) {
       background-color: #dce2ff;
       height: 190px;
@@ -84,6 +88,7 @@ $darkBlue: #1f2343;
       border-top-right-radius: 36px;
       border-bottom-right-radius: 35px;
     }
+
     &:nth-child(3) {
       background-color: #f0ddff;
       height: 190px;
@@ -91,6 +96,7 @@ $darkBlue: #1f2343;
       border-bottom-right-radius: 35px;
       border-bottom-left-radius: 31px;
     }
+
     &:nth-child(4) {
       background-color: #e5f9ff;
       height: 140px;

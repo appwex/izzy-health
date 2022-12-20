@@ -1,4 +1,3 @@
-import Combat from "components/combat/Combat";
+import Combat from 'components/combat'
 
-
-export default Combat;
+export default Combat
