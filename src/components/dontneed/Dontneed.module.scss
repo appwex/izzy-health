@@ -1,0 +1,263 @@
+@import '/src/styles/common.scss';
+
+@mixin mobile {
+  @media (max-width: 786px) {
+    @content;
+    flex-direction: column;
+  }
+}
+
+.careWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 50px;
+  width: 100vw;
+  font-family: 'Proxima Nova Alt Lt';
+
+  @include mobile() {
+    padding: 50px 35px;
+  }
+}
+
+.right {
+  width: 50%;
+  position: relative;
+  padding: 0 70px;
+  height: 100%;
+
+  @include mobile() {
+    width: 100%;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 46px;
+    line-height: 63px;
+    margin-bottom: 25px;
+    color: $blue;
+
+    @include mobile() {
+      font-size: 32px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    list-style-position: outside;
+    padding-left: 40px;
+
+    @include mobile() {
+      padding-left: 40px;
+    }
+
+    li {
+      padding-bottom: 30px;
+      padding-right: 50px;
+      font-size: 20px;
+      line-height: 27px;
+      color: $blue;
+      position: relative;
+
+      @include mobile() {
+        font-size: 16px;
+        line-height: 16px;
+        padding-right: 20px;
+      }
+
+      &:before {
+        content: '';
+        left: -40px;
+        top: 5px;
+        position: absolute;
+        @include mobile() {
+          top: 0;
+        }
+      }
+
+      &:nth-child(1)::before {
+        width: 13px;
+        height: 13px;
+        background: #c2e0f6;
+        border-radius: 0 100px 0 0;
+        -moz-border-radius: 0 100px 0 0;
+        -webkit-border-radius: 0 100px 0 0;
+      }
+
+      &:nth-child(2)::before {
+        width: 13px;
+        height: 13px;
+        background: #f6c2e8;
+        border-radius: 0 100px 0 0;
+        -moz-border-radius: 0 100px 0 0;
+        -webkit-border-radius: 0 100px 0 0;
+      }
+
+      &:nth-child(3)::before {
+        content: '';
+        width: 13px;
+        height: 13px;
+        background: #c6c2f6;
+        border-radius: 100px 0 0 0;
+        -moz-border-radius: 100px 0 0 0;
+        -webkit-border-radius: 100px 0 0 0;
+      }
+
+      &:nth-child(4)::before {
+        content: '';
+        width: 13px;
+        height: 13px;
+        background: #f6d2c2;
+        border-radius: 0 0 100px 0;
+        -moz-border-radius: 0 0 100px 0;
+        -webkit-border-radius: 0 0 100px 0;
+      }
+    }
+  }
+}
+
+.left {
+  width: 50%;
+  padding: 0px 50px;
+
+  @include mobile() {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.shapes {
+  span {
+    z-index: -1;
+    &:nth-child(1) {
+      width: 95px;
+      height: 95px;
+      position: absolute;
+      background: #f6d2c2;
+      border-radius: 0 0 100px 0;
+      -moz-border-radius: 0 0 100px 0;
+      -webkit-border-radius: 0 0 100px 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transform: translateY(100%);
+
+      @include mobile() {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      background: #c2e0f6;
+      border-radius: 0 100px 0 0;
+      -moz-border-radius: 0 100px 0 0;
+      -webkit-border-radius: 0 100px 0 0;
+      top: -45px;
+      left: 50%;
+      transform: translateY(-100%);
+
+      @include mobile() {
+        top: 0;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 95px;
+      height: 95px;
+      position: absolute;
+      background: #c6c2f6;
+      border-radius: 100px 0 0 0;
+      -moz-border-radius: 100px 0 0 0;
+      -webkit-border-radius: 100px 0 0 0;
+      top: 20px;
+      right: 70px;
+
+      @include mobile() {
+        right: 0px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &:nth-child(4) {
+      width: 45px;
+      height: 45px;
+      background: #f6c2e8;
+      border-radius: 0 0 0 100px;
+     -moz-border-radius: 0 0 0 100px;
+     -webkit-border-radius: 0 0 0 100px;
+      position: absolute;
+      bottom: 45px;
+      right: 135px;
+  
+      @include mobile() {
+        right: 50px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.smallShapes {
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  div {
+    width: 18px;
+    height: 18px;
+    z-index: -1;
+    &:nth-child(1) {
+      right: 10px;
+      bottom: 0;
+      position: absolute;
+      background: #f6d2c2;
+      border-radius: 0 0 100px 0;
+      -moz-border-radius: 0 0 100px 0;
+      -webkit-border-radius: 0 0 100px 0;  
+    }
+
+    &:nth-child(2) {
+      bottom: 40px;
+      right: -45px;
+      position: absolute;
+      background: #c6c2f6;
+      border-radius: 100px 0 0 0;
+      -moz-border-radius: 100px 0 0 0;
+      -webkit-border-radius: 100px 0 0 0;
+    }
+
+    &:nth-child(3) {
+      bottom: 50px;
+      right: -10px;
+      position: absolute;
+      background: #c2e0f6;
+      border-radius: 0 100px 0 0;
+      -moz-border-radius: 0 100px 0 0;
+      -webkit-border-radius: 0 100px 0 0;
+    }
+
+    &:nth-child(4) {
+      bottom: 10px;
+      right: -20px;
+      position: absolute;
+      background: #f6c2e8;
+      border-radius: 0 0 0 100px;
+      -moz-border-radius: 0 0 0 100px;
+      -webkit-border-radius: 0 0 0 100px;
+    }
+  }
+}
+
+.dontneedImg {
+  filter: drop-shadow(-11px 11px 71px rgba(176, 182, 197, 0.25));
+}
