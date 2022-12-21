@@ -3,14 +3,8 @@ import stl from './Dontneed.module.scss'
 import Image from 'next/image'
 import img from 'assets/images/dontneed-bg.png'
 
-const DontneedImg = props => {
-  return (
-    <Image
-      src={img}   
-      layout="responsive"
-      className={stl.dontneedImg}
-    />
-  )
+const DontneedImg = () => {
+  return <Image src={img} layout="responsive" className={stl.dontneedImg} />
 }
 
 const Dontneed = () => {
