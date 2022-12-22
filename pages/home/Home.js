@@ -16,6 +16,8 @@ const Home = () => (
         You can also checkout story of the components 🚀
       </a>
     </Link>
+  
+  
   </div>
 )
 
