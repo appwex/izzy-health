@@ -36,12 +36,12 @@ const Combat = () => {
         </div>
         <div className={stl.right}>
           <div className={stl.grid}>
-            {cardTexts.map(text => {            
-                return( 
-                  <div>
-                      <p>{text}</p>
-                   </div>
-                )
+            {cardTexts.map((text, idx) => {
+              return (
+                <div key={idx}>
+                  <p>{text}</p>
+                </div>
+              )
             })}
           </div>
         </div>

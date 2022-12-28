@@ -7,6 +7,30 @@
   }
 }
 
+@mixin borderRadiusTopRight {
+  border-radius: 0 100px 0 0;
+  -moz-border-radius: 0 100px 0 0;
+  -webkit-border-radius: 0 100px 0 0;
+}
+
+@mixin borderRadiusTopLeft {
+  border-radius: 100px 0 0 0;
+  -moz-border-radius: 100px 0 0 0;
+  -webkit-border-radius: 100px 0 0 0;
+}
+
+@mixin borderRadiusBottomRight {
+  border-radius: 0 0 100px 0;
+  -moz-border-radius: 0 0 100px 0;
+  -webkit-border-radius: 0 0 100px 0;
+}
+
+@mixin borderRadiusBottomLeft {
+  border-radius: 0 0 0 100px;
+  -moz-border-radius: 0 0 0 100px;
+  -webkit-border-radius: 0 0 0 100px;
+}
+
 .careWrapper {
   display: flex;
   align-items: center;
@@ -79,18 +103,13 @@
         width: 13px;
         height: 13px;
         background: #c2e0f6;
-        border-radius: 0 100px 0 0;
-        -moz-border-radius: 0 100px 0 0;
-        -webkit-border-radius: 0 100px 0 0;
+        @include borderRadiusTopRight();
       }
-
       &:nth-child(2)::before {
         width: 13px;
         height: 13px;
         background: #f6c2e8;
-        border-radius: 0 100px 0 0;
-        -moz-border-radius: 0 100px 0 0;
-        -webkit-border-radius: 0 100px 0 0;
+        @include borderRadiusBottomLeft();
       }
 
       &:nth-child(3)::before {
@@ -98,9 +117,7 @@
         width: 13px;
         height: 13px;
         background: #c6c2f6;
-        border-radius: 100px 0 0 0;
-        -moz-border-radius: 100px 0 0 0;
-        -webkit-border-radius: 100px 0 0 0;
+        @include borderRadiusTopLeft();
       }
 
       &:nth-child(4)::before {
@@ -108,9 +125,7 @@
         width: 13px;
         height: 13px;
         background: #f6d2c2;
-        border-radius: 0 0 100px 0;
-        -moz-border-radius: 0 0 100px 0;
-        -webkit-border-radius: 0 0 100px 0;
+        @include borderRadiusBottomRight();
       }
     }
   }
@@ -135,9 +150,7 @@
       height: 95px;
       position: absolute;
       background: #f6d2c2;
-      border-radius: 0 0 100px 0;
-      -moz-border-radius: 0 0 100px 0;
-      -webkit-border-radius: 0 0 100px 0;
+      @include borderRadiusBottomRight();
       bottom: 0;
       left: 0;
       transform: translateX(-100%);
@@ -154,9 +167,7 @@
       height: 45px;
       position: absolute;
       background: #c2e0f6;
-      border-radius: 0 100px 0 0;
-      -moz-border-radius: 0 100px 0 0;
-      -webkit-border-radius: 0 100px 0 0;
+      @include borderRadiusTopRight();
       top: -45px;
       left: 50%;
       transform: translateY(-100%);
@@ -173,9 +184,7 @@
       height: 95px;
       position: absolute;
       background: #c6c2f6;
-      border-radius: 100px 0 0 0;
-      -moz-border-radius: 100px 0 0 0;
-      -webkit-border-radius: 100px 0 0 0;
+      @include borderRadiusTopLeft();
       top: 20px;
       right: 70px;
 
@@ -190,9 +199,7 @@
       width: 45px;
       height: 45px;
       background: #f6c2e8;
-      border-radius: 0 0 0 100px;
-      -moz-border-radius: 0 0 0 100px;
-      -webkit-border-radius: 0 0 0 100px;
+      @include borderRadiusBottomLeft();
       position: absolute;
       bottom: 45px;
       right: 135px;
@@ -221,9 +228,7 @@
       bottom: 0;
       position: absolute;
       background: #f6d2c2;
-      border-radius: 0 0 100px 0;
-      -moz-border-radius: 0 0 100px 0;
-      -webkit-border-radius: 0 0 100px 0;
+      @include borderRadiusBottomRight();
     }
 
     &:nth-child(2) {
@@ -231,9 +236,7 @@
       right: -45px;
       position: absolute;
       background: #c6c2f6;
-      border-radius: 100px 0 0 0;
-      -moz-border-radius: 100px 0 0 0;
-      -webkit-border-radius: 100px 0 0 0;
+      @include borderRadiusTopLeft();
     }
 
     &:nth-child(3) {
@@ -241,9 +244,7 @@
       right: -10px;
       position: absolute;
       background: #c2e0f6;
-      border-radius: 0 100px 0 0;
-      -moz-border-radius: 0 100px 0 0;
-      -webkit-border-radius: 0 100px 0 0;
+      @include borderRadiusTopRight();
     }
 
     &:nth-child(4) {
@@ -251,9 +252,7 @@
       right: -20px;
       position: absolute;
       background: #f6c2e8;
-      border-radius: 0 0 0 100px;
-      -moz-border-radius: 0 0 0 100px;
-      -webkit-border-radius: 0 0 0 100px;
+      @include borderRadiusBottomLeft();
     }
   }
 }
