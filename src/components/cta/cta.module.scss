@@ -1,0 +1,181 @@
+@import 'styles/common';
+
+@mixin laptop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 764px) {
+    @content;
+  }
+}
+
+.container {
+  background-image: url(/background.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding: 0 2rem;
+  height: 1000px;
+  width: 100%;
+  position: relative;
+
+  @include laptop {
+    padding: 0 6rem;
+  }
+
+  @include mobile {
+    padding: 0 2rem;
+  }
+
+  .star {
+    position: absolute;
+    left: 0;
+    top: 80px;
+  }
+
+  .wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    @include laptop {
+      gap: 10px;
+    }
+
+    @include mobile {
+      align-content: center;
+    }
+
+    .header {
+      max-width: 45%;
+
+      @include laptop {
+        max-width: 70%;
+      }
+
+      @include mobile {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.4;
+        margin-bottom: 50px;
+        color: $white;
+
+        @include mobile {
+          font-size: 35px;
+        }
+      }
+
+      .emailForm {
+        display: flex;
+
+        @include mobile {
+          justify-content: center;
+        }
+
+        &:hover {
+          button {
+            transform: translateX(-40px);
+          }
+        }
+
+        .emailInput {
+          height: 59px;
+          width: 350px;
+          border-radius: 69px;
+          background-color: #fff;
+          color: #1f2343;
+          border: none;
+          font-weight: 400;
+          font-size: 15px;
+          padding-left: 29px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #959ea4;
+          }
+        }
+
+        button {
+          transform: translateX(-70px);
+          background-color: #1781ff;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .icons {
+      padding-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+      position: relative;
+
+      @include laptop {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      @include mobile {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 20px;
+        gap: 0px;
+      }
+
+      .icon {
+        text-align: center;
+
+        &:hover {
+          p {
+            transform: scale(1.1);
+          }
+        }
+
+        svg {
+          margin-bottom: 10px;
+          width: 100px;
+          height: 100px;
+
+          @include laptop {
+            width: 90px;
+            height: 90px;
+          }
+
+          @include mobile {
+            width: 80px;
+            height: 80px;
+          }
+        }
+
+        p {
+          color: $white;
+          font-weight: 600;
+          font-size: 0.8rem;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      .chatImg {
+        position: absolute;
+        right: -30%;
+        top: 60%;
+
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+  }
+}

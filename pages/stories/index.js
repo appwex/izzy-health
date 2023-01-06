@@ -13,7 +13,7 @@ const StoriesLinks = () => (
     <Link href="/stories/izzyButton">izzyButton</Link>
     <Link href="/stories/combat">combat section</Link>
     <Link href="/stories/care-section">Care Section</Link>
-
+    <Link href="/stories/cta">CTA Section</Link>
   </div>
 )
 
