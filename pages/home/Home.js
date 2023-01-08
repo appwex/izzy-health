@@ -4,7 +4,6 @@ import Button from 'components/button'
 
 import stl from './Home.module.scss'
 
-
 const Home = () => (
   <div className={stl.wrapper}>
     <h1>{`Let's Start without wasting our precious time 🕗`}</h1>
@@ -16,8 +15,6 @@ const Home = () => (
         You can also checkout story of the components 🚀
       </a>
     </Link>
-  
-  
   </div>
 )
 

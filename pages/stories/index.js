@@ -14,6 +14,7 @@ const StoriesLinks = () => (
     <Link href="/stories/combat">combat section</Link>
     <Link href="/stories/care-section">Care Section</Link>
     <Link href="/stories/cta">CTA Section</Link>
+    <Link href="/stories/dontneed">Dontneed Section</Link>
   </div>
 )
 
