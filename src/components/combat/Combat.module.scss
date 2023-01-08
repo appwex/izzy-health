@@ -1,9 +1,6 @@
 @import '/src/styles/common.scss';
 
 
-                
-$darkBlue: #1f2343;
-
 @mixin mobile {
 
   @media (max-width: 786px) {
@@ -27,7 +24,7 @@ $darkBlue: #1f2343;
 
   h2 {
     font-size: 46px;
-    color: $darkBlue;
+    color: $blue;
     margin-bottom: 20px;
     font-weight: 900;
 
