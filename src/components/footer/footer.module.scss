@@ -1,1 +1,75 @@
 @import 'styles/common';
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+$fontFamily : 'Proxima Nova Alt Lt', sans-serif;
+$fbColor: #4068D1;
+$ytColor: #FF3030;
+$twColor: #56BBF3;
+$lnColor: #1A8BF3;
+// .spaceBetweenWithoutCenter {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+.footerContainer{
+    font-family: $fontFamily;                        
+    background-color: #2f81fb;
+    height: 297px;
+    width: 100vw;
+    padding: 3.6875rem 9.25rem;
+}
+
+.upperFooterContainer{
+    @extend .spaceBetween;
+    color: white;
+}
+
+.footerLinks{
+    list-style: none;
+    @extend .flexCenter;
+    gap: 2rem;
+
+    li{
+        font-weight: 700;
+        font-size: 15px;
+    }
+}
+
+.socialIcons{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border-radius: 5rem;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+
+.socialLinks{
+    @extend .flexCenter;
+    gap: 0.5rem
+}
+
+.fbDiv{
+    @extend .socialIcons;
+    background-color: $fbColor;
+}
+
+.ytDiv{
+    @extend .socialIcons;
+    background-color: $ytColor;
+}
+
+.twDiv{
+    @extend .socialIcons;
+    background-color: $twColor;
+}
+
+.lnDiv{
+    @extend .socialIcons;
+    background-color: $lnColor;
+}
