@@ -5,25 +5,48 @@ $fbColor: #4068D1;
 $ytColor: #FF3030;
 $twColor: #56BBF3;
 $lnColor: #1A8BF3;
-// .spaceBetweenWithoutCenter {
-//     display: flex;
-//     justify-content: space-between;
-// }
+
+@mixin mobile {
+    @media (max-width: 786px) {
+      @content;
+    }
+  }
+
+  @mixin tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
 
 .footerContainer{
     font-family: $fontFamily;                        
     background-color: #2f81fb;
-    height: 297px;
     width: 100vw;
     padding: 3.6875rem 9.25rem;
     color: white;
     position: fixed;
     bottom: 0;
     left:0;
+
+    @include mobile() {
+        padding: 3.7875rem 1rem;
+      }
+
+    @include tablet() {
+        padding: 3.7875rem 3rem;
+      }
 }
 
 .upperFooterContainer{
     @extend .spaceBetween;
+    @include mobile(){
+        flex-direction: column;
+    }
+    @include tablet() {
+        gap: 3rem;
+        flex-wrap: wrap;
+      }
 }
 
 
@@ -36,6 +59,12 @@ $lnColor: #1A8BF3;
         font-weight: 700;
         font-size: 15px;
     }
+
+    @include mobile(){
+        flex-direction: column;
+        margin: 2rem 2rem;
+    }
+
 }
 
 .link{
@@ -86,14 +115,27 @@ $lnColor: #1A8BF3;
 .izzyAi{
     margin-top: 4.8125rem;
     cursor: pointer;
+
+    @include mobile(){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .lowerFooterContent{
     margin-top: 1.0625rem;
     @extend .spaceBetween;
+    gap: 1rem;
     p{
         font-weight: 300px;
         font-size: 15px;
+    }
+
+    @include mobile(){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -104,5 +146,10 @@ $lnColor: #1A8BF3;
     Link{
         font-weight: 300px;
         font-size: 15px;
+    }
+
+    @include mobile(){
+       margin-top: 1rem;
+       gap: 2rem;
     }
 }

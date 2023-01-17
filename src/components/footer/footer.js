@@ -59,13 +59,15 @@ function Footer() {
           </div>
         </div>
       </div>
-      <Link href="/" passHref>
-        <IzzyAi className={styl.izzyAi} />
-      </Link>
+      <div className={styl.izzyAi}>
+        <Link href="/" passHref>
+          <IzzyAi />
+        </Link>
+      </div>
       <div id="lowerFooterContent" className={styl.lowerFooterContent}>
         <p>© lezzyhealth2019. All rights reserved.</p>
         <div className={styl.termsNPrivacy}>
-          <Link href="/">Trems and conditation</Link>
+          <Link href="/">Terms and condition</Link>
           <Link href="/">Privacy policy</Link>
         </div>
       </div>
