@@ -16,12 +16,16 @@ $lnColor: #1A8BF3;
     height: 297px;
     width: 100vw;
     padding: 3.6875rem 9.25rem;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left:0;
 }
 
 .upperFooterContainer{
     @extend .spaceBetween;
-    color: white;
 }
+
 
 .footerLinks{
     list-style: none;
@@ -32,6 +36,10 @@ $lnColor: #1A8BF3;
         font-weight: 700;
         font-size: 15px;
     }
+}
+
+.link{
+    cursor: pointer;
 }
 
 .socialIcons{
@@ -72,4 +80,29 @@ $lnColor: #1A8BF3;
 .lnDiv{
     @extend .socialIcons;
     background-color: $lnColor;
+}
+
+
+.izzyAi{
+    margin-top: 4.8125rem;
+    cursor: pointer;
+}
+
+.lowerFooterContent{
+    margin-top: 1.0625rem;
+    @extend .spaceBetween;
+    p{
+        font-weight: 300px;
+        font-size: 15px;
+    }
+}
+
+.termsNPrivacy{
+    @extend .flexStart;
+    gap: 1.5rem;
+
+    Link{
+        font-weight: 300px;
+        font-size: 15px;
+    }
 }

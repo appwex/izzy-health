@@ -1,13 +1,22 @@
 import React from 'react'
 import styl from './footer.module.scss'
 import Link from 'next/link'
-import { FooterLogo, FbLogo, YtLogo, TwLogo, LnLogo } from 'assets/svg'
+import Image from 'next/image'
+import FooterLogo from 'assets/images/footerLogo.png'
+import { FbLogo, YtLogo, TwLogo, LnLogo, IzzyAi } from 'assets/svg'
 
 function Footer() {
   return (
-    <div className={styl.footerContainer}>
+    <footer className={styl.footerContainer}>
       <div id="upperFooterContents" className={styl.upperFooterContainer}>
-        <FooterLogo />
+        {/* <FooterLogo className={styl.link} /> */}
+        <Link href="/" passHref>
+          <Image
+            src={FooterLogo}
+            className={styl.link}
+            alt="izzy health logo"
+          />
+        </Link>
         <div id="footerLinks">
           <ul className={styl.footerLinks}>
             <li>
@@ -50,8 +59,17 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div id="lowerFooterContent"></div>
-    </div>
+      <Link href="/" passHref>
+        <IzzyAi className={styl.izzyAi} />
+      </Link>
+      <div id="lowerFooterContent" className={styl.lowerFooterContent}>
+        <p>© lezzyhealth2019. All rights reserved.</p>
+        <div className={styl.termsNPrivacy}>
+          <Link href="/">Trems and conditation</Link>
+          <Link href="/">Privacy policy</Link>
+        </div>
+      </div>
+    </footer>
   )
 }
 
