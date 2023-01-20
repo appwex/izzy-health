@@ -4,6 +4,7 @@ import CareSection from '../stories/care-section'
 import Combat from '../stories/combat'
 import Dontneed from '../stories/dontneed'
 import Footer from '../stories/footer'
+import LandingEnd from '../stories/landingEnd'
 
 import stl from './Landing.module.scss'
 
@@ -14,6 +15,7 @@ const Landing = () => (
     <CareSection />
     <Combat />
     <Dontneed />
+    <LandingEnd />
     <Footer />
   </div>
 )
