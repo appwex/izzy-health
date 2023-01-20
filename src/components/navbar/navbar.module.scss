@@ -1,4 +1,6 @@
 @import 'styles/common';
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+$fontFamily: 'Proxima Nova Alt Lt', sans-serif;
 
 @mixin mobile {
   @media (max-width: 786px) {
@@ -9,6 +11,7 @@
 .header {
   background-color: transparent;
   position: absolute;
+  font-family: $fontFamily;
   padding: 1rem 0;
   z-index: 1;
   left: 10rem;
