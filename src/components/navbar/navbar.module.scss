@@ -7,12 +7,14 @@
 }
 
 .header {
-  background-image: url(/background.svg);
+  background-color: transparent;
+  position: absolute;
   padding: 1rem 0;
-  position: relative;
-
+  z-index: 1;
+  left: 10rem;
   @include mobile() {
     padding: 3rem 0;
+    left: 6rem;
   }
 
   a {

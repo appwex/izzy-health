@@ -1,4 +1,6 @@
 @import 'styles/common';
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+$fontFamily: 'Proxima Nova Alt Lt', sans-serif;
 
 @mixin mobileMq {
   @media (max-width: 849px) {
@@ -7,18 +9,27 @@
 }
 
 .container {
-  padding: 2rem 4rem;
+  padding: 0 8rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
   color: $blue;
+  font-family: $fontFamily;
 
   @include mobileMq() {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .header {
-
     h1 {
-      font-size: 1.8rem;
+      font-size: 2.875rem;
+      color: #1f2343;
       margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.25rem;
+      color: #6f6f89;
+      font-weight: 400;
+      margin-top: 2rem;
     }
   }
 
@@ -39,8 +50,11 @@
       margin-right: 2rem;
 
       .contact {
-        font-size: 1.4rem;
-        line-height: 1.4;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #1f2343;
+        padding-top: 1.6rem;
+        padding-bottom: 1rem;
       }
 
       span {
@@ -60,20 +74,31 @@
       }
 
       .compare {
-        font-size: 0.9rem;
+        font-size: 1.125rem;
         padding-right: 4rem;
-        margin-top: 1.8rem;
+        padding-top: 3rem;
         @include mobileMq() {
           display: none;
         }
       }
     }
 
+    .start {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
     .doctors {
       display: flex;
+      align-items: flex-end;
+      gap: 5.25rem;
 
       @include mobileMq() {
         margin: 2rem 0;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
       }
 
       > div {
@@ -82,13 +107,14 @@
         align-items: center;
 
         svg {
-          transform: scale(0.6);
-          margin-top: -15px;
+          transform: scale(1);
+          // margin-top: -15px;
         }
 
         p {
           font-weight: 600;
-          font-size: 0.8rem;
+          font-size: 1.125rem;
+          padding-top: 2.8125rem;
         }
       }
     }
