@@ -24,17 +24,12 @@ $lnColor: #1a8bf3;
   width: 100vw;
   position: absolute;
   background-color: transparent;
-  top: 508%;
-  z-index: 3;
-  // margin-top: 2rem;
   padding: 3.6875rem 9.25rem;
   color: white;
   bottom: 0;
-  left: 0;
 
   @include mobile() {
     padding: 3.7875rem 1rem;
-    top: 596%;
   }
 
   @include tablet() {

@@ -1,0 +1,23 @@
+@mixin mobile {
+  @media (max-width: 786px) {
+    @content;
+  }
+}
+
+.wrapper {
+  //   @include mobile() {
+  //     padding-bottom: 4rem;
+  //   }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+
+  @include mobile() {
+    position: relative;
+    bottom: 0;
+    z-index: 5;
+  }
+}

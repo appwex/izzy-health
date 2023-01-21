@@ -9,15 +9,19 @@ import LandingEnd from '../stories/landingEnd'
 import stl from './Landing.module.scss'
 
 const Landing = () => (
-  <div className={stl.wrapper}>
-    <Navbar />
-    <Cta />
-    <CareSection />
-    <Combat />
-    <Dontneed />
-    <LandingEnd />
-    <Footer />
-  </div>
+  <>
+    <div className={stl.wrapper}>
+      <Navbar />
+      <Cta />
+      <CareSection />
+      <Combat />
+      <Dontneed />
+      <LandingEnd />
+    </div>
+    <div className={stl.footer}>
+      <Footer />
+    </div>
+  </>
 )
 
 export default Landing
