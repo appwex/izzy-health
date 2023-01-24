@@ -1,0 +1,126 @@
+@import 'styles/common';
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+$fontFamily: 'Proxima Nova Alt Lt', sans-serif;
+
+@mixin mobileMq {
+  @media (max-width: 849px) {
+    @content;
+  }
+}
+
+.container {
+  padding: 0 8rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  color: $blue;
+  font-family: $fontFamily;
+
+  @include mobileMq() {
+    padding: 2rem;
+  }
+
+  .header {
+    h1 {
+      font-size: 2.875rem;
+      color: #1f2343;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.25rem;
+      color: #6f6f89;
+      font-weight: 400;
+      margin-top: 2rem;
+    }
+  }
+
+  .body {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .mobileCompareText {
+      display: none;
+      margin-top: 1.5rem;
+      @include mobileMq() {
+        display: block;
+      }
+    }
+
+    .text {
+      margin-right: 2rem;
+
+      .contact {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #1f2343;
+        padding-top: 1.6rem;
+        padding-bottom: 1rem;
+      }
+
+      span {
+        color: $linkHover;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      button {
+        background-color: $linkHover;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $white;
+        word-break: keep-all;
+      }
+
+      .compare {
+        font-size: 1.125rem;
+        padding-right: 4rem;
+        padding-top: 3rem;
+        @include mobileMq() {
+          display: none;
+        }
+      }
+    }
+
+    .start {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .doctors {
+      display: flex;
+      align-items: flex-end;
+      gap: 5.25rem;
+
+      @include mobileMq() {
+        margin: 2rem 0;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        svg {
+          transform: scale(1);
+          // margin-top: -15px;
+        }
+
+        p {
+          font-weight: 600;
+          font-size: 1.125rem;
+          padding-top: 2.8125rem;
+        }
+      }
+    }
+
+    @include mobileMq() {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

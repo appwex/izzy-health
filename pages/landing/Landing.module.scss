@@ -1,0 +1,17 @@
+@mixin mobile {
+  @media (max-width: 786px) {
+    @content;
+  }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+
+  @include mobile() {
+    position: relative;
+    bottom: 0;
+    z-index: 5;
+  }
+}

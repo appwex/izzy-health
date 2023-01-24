@@ -1,155 +1,150 @@
 @import 'styles/common';
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
-$fontFamily : 'Proxima Nova Alt Lt', sans-serif;
-$fbColor: #4068D1;
-$ytColor: #FF3030;
-$twColor: #56BBF3;
-$lnColor: #1A8BF3;
+$fontFamily: 'Proxima Nova Alt Lt', sans-serif;
+$fbColor: #4068d1;
+$ytColor: #ff3030;
+$twColor: #56bbf3;
+$lnColor: #1a8bf3;
 
 @mixin mobile {
-    @media (max-width: 786px) {
-      @content;
-    }
+  @media (max-width: 786px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+.footerContainer {
+  font-family: $fontFamily;
+  background-color: #2f81fb;
+  width: 100vw;
+  position: absolute;
+  background-color: transparent;
+  padding: 3.6875rem 9.25rem;
+  color: white;
+  bottom: 0;
+
+  @include mobile() {
+    padding: 3.7875rem 1rem;
   }
 
-  @mixin tablet {
-    @media (max-width: 900px) {
-      @content;
-    }
+  @include tablet() {
+    padding: 3.7875rem 3rem;
+  }
+}
+
+.upperFooterContainer {
+  @extend .spaceBetween;
+  @include mobile() {
+    flex-direction: column;
+  }
+  @include tablet() {
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+}
+
+.footerLinks {
+  list-style: none;
+  @extend .flexCenter;
+  gap: 2rem;
+
+  li {
+    font-weight: 700;
+    font-size: 15px;
   }
 
-
-.footerContainer{
-    font-family: $fontFamily;                        
-    background-color: #2f81fb;
-    width: 100vw;
-    padding: 3.6875rem 9.25rem;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    left:0;
-
-    @include mobile() {
-        padding: 3.7875rem 1rem;
-      }
-
-    @include tablet() {
-        padding: 3.7875rem 3rem;
-      }
+  @include mobile() {
+    flex-direction: column;
+    margin: 2rem 2rem;
+  }
 }
 
-.upperFooterContainer{
-    @extend .spaceBetween;
-    @include mobile(){
-        flex-direction: column;
-    }
-    @include tablet() {
-        gap: 3rem;
-        flex-wrap: wrap;
-      }
+.link {
+  cursor: pointer;
 }
 
+.socialIcons {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  border-radius: 5rem;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.footerLinks{
-    list-style: none;
-    @extend .flexCenter;
-    gap: 2rem;
-
-    li{
-        font-weight: 700;
-        font-size: 15px;
-    }
-
-    @include mobile(){
-        flex-direction: column;
-        margin: 2rem 2rem;
-    }
-
-}
-
-.link{
+  &:hover {
     cursor: pointer;
+  }
 }
 
-.socialIcons{
-    width: 2.1875rem;
-    height: 2.1875rem;
-    border-radius: 5rem;
-    border: 1px solid white;
+.socialLinks {
+  @extend .flexCenter;
+  gap: 0.5rem;
+}
+
+.fbDiv {
+  @extend .socialIcons;
+  background-color: $fbColor;
+}
+
+.ytDiv {
+  @extend .socialIcons;
+  background-color: $ytColor;
+}
+
+.twDiv {
+  @extend .socialIcons;
+  background-color: $twColor;
+}
+
+.lnDiv {
+  @extend .socialIcons;
+  background-color: $lnColor;
+}
+
+.izzyAi {
+  margin-top: 4.8125rem;
+  cursor: pointer;
+
+  @include mobile() {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &:hover{
-        cursor: pointer;
-    }
-
+  }
 }
 
-.socialLinks{
-    @extend .flexCenter;
-    gap: 0.5rem
+.lowerFooterContent {
+  margin-top: 1.0625rem;
+  @extend .spaceBetween;
+  gap: 1rem;
+  p {
+    font-weight: 300px;
+    font-size: 15px;
+  }
+
+  @include mobile() {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.fbDiv{
-    @extend .socialIcons;
-    background-color: $fbColor;
-}
+.termsNPrivacy {
+  @extend .flexStart;
+  gap: 1.5rem;
 
-.ytDiv{
-    @extend .socialIcons;
-    background-color: $ytColor;
-}
+  Link {
+    font-weight: 300px;
+    font-size: 15px;
+  }
 
-.twDiv{
-    @extend .socialIcons;
-    background-color: $twColor;
-}
-
-.lnDiv{
-    @extend .socialIcons;
-    background-color: $lnColor;
-}
-
-
-.izzyAi{
-    margin-top: 4.8125rem;
-    cursor: pointer;
-
-    @include mobile(){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.lowerFooterContent{
-    margin-top: 1.0625rem;
-    @extend .spaceBetween;
-    gap: 1rem;
-    p{
-        font-weight: 300px;
-        font-size: 15px;
-    }
-
-    @include mobile(){
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.termsNPrivacy{
-    @extend .flexStart;
-    gap: 1.5rem;
-
-    Link{
-        font-weight: 300px;
-        font-size: 15px;
-    }
-
-    @include mobile(){
-       margin-top: 1rem;
-       gap: 2rem;
-    }
+  @include mobile() {
+    margin-top: 1rem;
+    gap: 2rem;
+  }
 }
