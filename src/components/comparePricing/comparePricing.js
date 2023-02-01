@@ -1,70 +1,65 @@
 import React, { useState } from 'react'
 import stl from './comparePricing.module.scss'
+import clsx from 'clsx'
 import PricingCard from './pricingCard'
-import {
-  Nigeria,
-  India,
-  Mexico,
-  CostaRica,
-  Colombia,
-  Dominican,
-} from 'assets/svg'
+import rawData from './rawData'
+
+import { India, Mexico, Nigeria } from './assets'
 
 const ComparePricing = () => {
-  const [data, setData] = useState('')
+  const [element, setData] = useState(rawData[0])
 
-  const countries = {
-    Nigeria: {
-      average: '62',
-      physician: '35',
-      psychologist: '3',
-      nutritionist: '24',
-    },
-    India: {
-      average: '82',
-      physician: '45',
-      psychologist: '13',
-      nutritionist: '24',
-    },
-    Mexico: {
-      average: '85',
-      physician: '45',
-      psychologist: '16',
-      nutritionist: '24',
-    },
-    CostaRica: {
-      average: '81',
-      physician: '45',
-      psychologist: '12',
-      nutritionist: '24',
-    },
-    Colombia: {
-      average: '80',
-      physician: '40',
-      psychologist: '16',
-      nutritionist: '24',
-    },
-    Dominican: {
-      average: '75',
-      physician: '45',
-      psychologist: '16',
-      nutritionist: '14',
-    },
-  }
-  const parentToChild = country => {
-    data = countries[country]
-    setData(data)
-  }
+  const countryData = rawData.map(element => {
+    const parentToChild = () => {
+      setData(element)
+    }
+    return (
+      <div
+        key={element.index}
+        className={clsx(stl.country)}
+        onClick={() => parentToChild(element.country)}
+      >
+        {/* flag icon */}
+        <India />
+        {/* <img src={`./assets/${element.flagIcon}`} />  DOESNT'T WORK */}
+
+        {/* country name */}
+        <span>{element.country}</span>
+      </div>
+    )
+  })
 
   return (
     <section className={stl.container}>
       <div className={stl.pricing}>
-        <div className={stl.countries}>
-          <div className={stl.country} onClick={() => parentToChild('Nigeria')}>
+        {/* list of countries (flag and name) */}
+        <div className={stl.countries}>{countryData}</div>
+        {/* pricing card dinamically changing */}
+        <PricingCard {...element} />
+      </div>
+    </section>
+  )
+}
+
+export default ComparePricing
+
+{
+  /* default values
+          <div
+            className={clsx(
+              stl.country 
+              // data.country === 'Nigeria' ? stl.active : ''
+            )}
+            onClick={() => parentToChild('Nigeria')}
+          >
             <Nigeria />
             <span>Nigeria</span>
           </div>
-          <div className={stl.country} onClick={() => parentToChild('India')}>
+     
+          <div
+            className={clsx(stl.country)}
+            onClick={() => parentToChild('India')}
+          >
             <India />
             <span>India</span>
           </div>
@@ -92,14 +87,5 @@ const ComparePricing = () => {
           >
             <Dominican />
             <span>Dominican Republic</span>
-          </div>
-        </div>
-
-        {/* Pricing card component */}
-        <PricingCard parentToChild={data} />
-      </div>
-    </section>
-  )
+          </div>*/
 }
-
-export default ComparePricing

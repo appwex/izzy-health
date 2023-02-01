@@ -3,7 +3,7 @@ import stl from './comparePricing.module.scss'
 import IzzyButton from 'components/izzyButton/'
 import { BUTTON_TYPE } from 'components/izzyButton/IzzyButton'
 
-const PricingCard = ({ parentToChild }) => {
+const PricingCard = props => {
   return (
     <div className={stl.card}>
       <h3 className={stl.card__header}>Pricing</h3>
@@ -13,13 +13,16 @@ const PricingCard = ({ parentToChild }) => {
       </p>
       <div className={stl.average}>
         <div className={stl.info}>
-          <h3>Average Price</h3>
+          <h3>
+            Average Price in <br />
+            {props.country}
+          </h3>
           <p>National average price for a cear team per visit</p>
         </div>
 
         <p className={stl.price}>
           <span>$</span>
-          {parentToChild.average}
+          {props.average}
         </p>
       </div>
       <div className={stl.doctors}>
@@ -27,21 +30,21 @@ const PricingCard = ({ parentToChild }) => {
           <p className={stl.doctor}>Physician </p>
           <p className={stl.price}>
             <span>$</span>
-            {parentToChild.physician}
+            {props.physician}
           </p>
         </div>
         <div>
           <p className={stl.doctor}>Psychologist </p>
           <p className={stl.price}>
             <span>$</span>
-            {parentToChild.psychologist}
+            {props.psychologist}
           </p>
         </div>
         <div>
           <p className={stl.doctor}> Nutritionist</p>
           <p className={stl.price}>
             <span>$</span>
-            {parentToChild.nutritionist}
+            {props.nutritionist}
           </p>
         </div>
       </div>
