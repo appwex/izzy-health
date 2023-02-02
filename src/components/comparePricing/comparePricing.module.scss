@@ -40,6 +40,7 @@
     }
   }
 }
+
 .countries {
   display: flex;
   align-items: flex-start;
@@ -93,7 +94,7 @@
     }
 
     &:hover span {
-      font-size: 37px;
+      font-size: 30px;
       font-weight: 700;
     }
 
@@ -101,11 +102,12 @@
       transform: scale(0.95);
     }
   }
-  .active {
-    font-size: 37px;
-    font-weight: 900;
+  .activeCountry {
+    font-size: 35px;
+    font-weight: 700;
   }
 }
+
 // <PricingCard> component
 .card {
   background-color: #fff;
@@ -170,6 +172,7 @@
       }
     }
   }
+
   .doctors {
     display: flex;
     gap: 50px;
