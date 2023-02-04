@@ -17,6 +17,7 @@ const StoriesLinks = () => (
     <Link href="/stories/dontneed">Dontneed Section</Link>
     <Link href="/stories/landingEnd">Landing End section</Link>
     <Link href="/stories/footer">Footer Section</Link>
+    <Link href="/stories/comparePricing">Compare pricing Section</Link>
   </div>
 )
 

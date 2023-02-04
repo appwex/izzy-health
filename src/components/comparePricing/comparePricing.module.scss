@@ -1,0 +1,196 @@
+@import 'styles/common';
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-alt-lt-2');
+
+@mixin laptop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 764px) {
+    @content;
+  }
+}
+
+.container {
+  font-family: 'Proxima Nova Alt Lt', sans-serif;
+  background-image: url(../../../src/assets/images/bg-pricing-right.png),
+    url(../../../src/assets/images/bg-pricing-left.png);
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 680px;
+  margin: 40px auto;
+
+  .pricing {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #1f2343;
+
+    @include laptop {
+      max-width: 1000px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.countries {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 38px;
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 100px;
+  }
+
+  .country {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transform-origin: left;
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+
+    .active {
+      font-size: 37px;
+      font-weight: 700;
+    }
+
+    @include laptop {
+      gap: 15px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      @include mobile {
+        transform: scale(1.3);
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      transform-origin: center;
+    }
+
+    & > span {
+      transform-origin: left;
+      transition: all 0.3s ease-in-out;
+      font-size: 24px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    // &:hover span {
+    //   font-size: 30px;
+    //   font-weight: 700;
+    // }
+
+    &:active span {
+      transform: scale(0.95);
+    }
+  }
+  .activeCountry {
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
+
+// <PricingCard> component
+.card {
+  background-color: #fff;
+  padding: 55px 40px 77px;
+  border-radius: 85px 61px 227.5px;
+  width: 490px;
+  box-shadow: -12px 25px 53px rgba(186, 181, 216, 0.25);
+
+  @include mobile {
+    width: 550px;
+  }
+
+  &__header {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  &__subscription {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #1bb6e6;
+    margin-bottom: 28px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .average {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+    .info {
+      h3 {
+        font-size: 30px;
+        line-height: 1.4;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.4;
+        max-width: 240px;
+
+        @include mobile {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .price {
+      color: #1462f9;
+      font-weight: 700;
+      font-size: 72px;
+
+      span {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .doctors {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 48px;
+
+    .doctor {
+      font-size: 16px;
+      margin-bottom: 17px;
+    }
+
+    .price {
+      text-align: center;
+      font-size: 21px;
+      font-weight: 700;
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
