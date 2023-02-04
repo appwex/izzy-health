@@ -1,3 +1,3 @@
-import Combat from "./Combat";
+import Combat from './Combat'
 
 export default Combat

@@ -1,0 +1,58 @@
+const rawData = [
+  {
+    index: 1,
+    country: 'Nigeria',
+    average: '62',
+    physician: '35',
+    psychologist: '3',
+    nutritionist: '24',
+    flagIcon: 'nigeria.svg',
+  },
+  {
+    index: 2,
+    country: 'India',
+    average: '82',
+    physician: '45',
+    psychologist: '13',
+    nutritionist: '24',
+    flagIcon: 'india.svg',
+  },
+  {
+    index: 3,
+    country: 'Mexico',
+    average: '85',
+    physician: '45',
+    psychologist: '16',
+    nutritionist: '24',
+    flagIcon: 'mexico.svg',
+  },
+  {
+    index: 4,
+    country: 'Costa Rica',
+    average: '81',
+    physician: '45',
+    psychologist: '12',
+    nutritionist: '24',
+    flagIcon: 'costa-rica.svg',
+  },
+  {
+    index: 5,
+    country: 'Colombia',
+    average: '80',
+    physician: '40',
+    psychologist: '16',
+    nutritionist: '24',
+    flagIcon: 'colombia.svg',
+  },
+  {
+    index: 6,
+    country: 'Dominican Republic',
+    average: '75',
+    physician: '45',
+    psychologist: '16',
+    nutritionist: '14',
+    flagIcon: 'dominican.svg',
+  },
+]
+
+export default rawData
