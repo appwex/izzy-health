@@ -3,13 +3,16 @@ import stl from './comparePricing.module.scss'
 import clsx from 'clsx'
 import PricingCard from './pricingCard'
 import rawData from './rawData'
+import Image from 'next/image'
 
 const ComparePricing = () => {
   const [element, setData] = useState(rawData[0])
+  const [activeIndex, setActiveIndex] = useState(rawData[0].index)
 
   const countryData = rawData.map(element => {
     const parentToChild = () => {
       setData(element)
+      setActiveIndex(element.index)
     }
 
     return (
@@ -21,14 +24,16 @@ const ComparePricing = () => {
         }}
       >
         {/* flag icon */}
-        <img
+        <Image
           src={`../../assets/${element.flagIcon}`}
-          alt="icon"
-          // width={50}
-          // height={50}
+          alt={`${element.country} icon`}
+          width={50}
+          height={50}
         />
         {/* country name */}
-        <span>{element.country}</span>
+        <span className={`${activeIndex === element.index ? stl.active : ''}`}>
+          {element.country}
+        </span>
       </div>
     )
   })
