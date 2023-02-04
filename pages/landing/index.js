@@ -5,6 +5,7 @@ import Combat from '../stories/combat'
 import Dontneed from '../stories/dontneed'
 import Footer from '../stories/footer'
 import LandingEnd from '../stories/landingEnd'
+import ComparePricing from '../stories/comparePricing'
 
 import stl from './Landing.module.scss'
 
@@ -14,6 +15,7 @@ const Landing = () => (
       <Navbar />
       <Cta />
       <CareSection />
+      <ComparePricing />
       <Combat />
       <Dontneed />
       <LandingEnd />
